@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  ECR_REPOSITORY: 133984615170.dkr.ecr.ap-northeast-2.amazonaws.com/algo/damoim
+  ECR_REPOSITORY: algo/damoim
   ECS_SERVICE: damoim-application-1
   ECS_CLUSTER: damoim
   ECS_TASK_DEFINITION: task-definition.json
