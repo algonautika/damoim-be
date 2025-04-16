@@ -6,11 +6,11 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  ECR_REPOSITORY: 133984615170.dkr.ecr.ap-northeast-2.amazonaws.com
-  ECS_SERVICE: damoim-application
+  ECR_REPOSITORY: 133984615170.dkr.ecr.ap-northeast-2.amazonaws.com/algo/damoim
+  ECS_SERVICE: damoim-application-1
   ECS_CLUSTER: damoim
   ECS_TASK_DEFINITION: task-definition.json
-  CONTAINER_NAME: damoim-application
+  CONTAINER_NAME: damoim-application-1
 
 permissions:
   contents: read
