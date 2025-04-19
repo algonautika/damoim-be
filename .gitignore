@@ -6,7 +6,8 @@ build/
 !**/src/test/**/build/
 
 # additional files
-/src/main/resources
+#/src/main/resources
+src/main/resources/application-test.yml
 
 ### STS ###
 .apt_generated
