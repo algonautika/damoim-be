@@ -1,16 +1,19 @@
 package algo.damoim
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+import org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration
 import org.springframework.boot.runApplication
 
-@SpringBootApplication
+@SpringBootApplication(
+    exclude = [
+        SecurityAutoConfiguration::class,
+        SecurityFilterAutoConfiguration::class, // Servlet 기반 Security Filter 자동 설정을 명시적으로 제외
+    ]
+)
 class DamoimApplication
 
 fun main(args: Array<String>) {
-    println("=== ENV DUMP BEFORE SPRING START ===")
-    println("DB_URL      = ${System.getenv("DB_URL")}")
-    println("DB_USERNAME = ${System.getenv("DB_USERNAME")}")
-     println("DB_PASSWORD = ${System.getenv("DB_PASSWORD")}")
-    println("====================================")
     runApplication<DamoimApplication>(*args)
+
 }
